@@ -35,7 +35,7 @@ function _assignResizer(sidebar) {
 
   // On mouseup remove listeners & save final size
   function stopResize(e) {
-    game.user.setFlag('sidebar-resizer', 'sidebar-init-size', sidebar.offsetWidth);
+    window.localStorage.setItem('sidebar-resizer-init-size', sidebar.offsetWidth);
     window.removeEventListener('mousemove', resize, false);
     window.removeEventListener('mouseup', stopResize, false);
   }
@@ -48,7 +48,7 @@ Hooks.once('ready', function() {
 });
 
 Hooks.on('renderSidebarTab', function(targetTab) {
-  const lastSidebarSize = game.user.getFlag('sidebar-resizer', 'sidebar-init-size');
+  const lastSidebarSize = window.localStorage.getItem('sidebar-resizer-init-size');
   if (!lastSidebarSize) return;
   if (targetTab.popOut) {
     targetTab.setPosition({width: lastSidebarSize});
@@ -61,7 +61,7 @@ Hooks.on('renderSidebarTab', function(targetTab) {
 });
 
 Hooks.on('collapseSidebar', function(_, isCollapsing) {
-  const lastSidebarSize = game.user.getFlag('sidebar-resizer', 'sidebar-init-size');
+  const lastSidebarSize = window.localStorage.getItem('sidebar-resizer-init-size');
   if (!lastSidebarSize || isCollapsing) return;
   if (Number.isInteger(+lastSidebarSize)) {
     const sidebar = document.querySelector('#sidebar');
