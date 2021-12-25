@@ -45,6 +45,14 @@ Hooks.once('ready', function() {
   // Setup vars
   const sidebar = ui.sidebar.element[0];
   _assignResizer(sidebar);
+
+  // Enable Chat popout Resize
+  libWrapper.register('sidebar-resizer', 'ChatLog.defaultOptions', function (wrapped, ...args) {
+    let result = wrapped(...args);
+    result.resizable = true;
+    result.height = 300;
+    return result;
+  }, 'WRAPPER');
 });
 
 Hooks.on('renderSidebarTab', function(targetTab) {
