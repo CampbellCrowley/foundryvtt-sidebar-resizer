@@ -1,3 +1,6 @@
+# 0.2.2
+* Fixed an issue with ghost sidebars in some special circumstances
+
 # 0.2.1
 * Resize pop out chats too!
 * LibWrapper check and name update

@@ -52,6 +52,9 @@ Hooks.once('ready', function() {
       let result = wrapped(...args);
       result.resizable = true;
       result.height = parseInt($("#board").css('height')) / 2;
+      const lastSidebarSize = window.localStorage.getItem('sidebar-resizer-init-size');
+      if (!lastSidebarSize) return;
+      if (Number.isInteger(+lastSidebarSize)) result.width = parseInt(lastSidebarSize);
       return result;
     }, 'WRAPPER');
   } else {
@@ -59,16 +62,12 @@ Hooks.once('ready', function() {
   }
 });
 
-Hooks.on('renderSidebarTab', function(targetTab) {
+Hooks.once('renderSidebarTab', function() {
   const lastSidebarSize = window.localStorage.getItem('sidebar-resizer-init-size');
   if (!lastSidebarSize) return;
-  if (targetTab.popOut) {
-    targetTab.setPosition({width: lastSidebarSize});
-  } else {
-    if (Number.isInteger(+lastSidebarSize)) {
-      const sidebar = document.querySelector('#sidebar');
-      sidebar.setAttribute('style', `width: ${lastSidebarSize}px`);
-    }
+  if (Number.isInteger(+lastSidebarSize)) {
+    const sidebar = document.querySelector('#sidebar');
+    sidebar.setAttribute('style', `width: ${lastSidebarSize}px`);
   }
 });
 
