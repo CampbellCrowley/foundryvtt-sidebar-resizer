@@ -47,12 +47,16 @@ Hooks.once('ready', function() {
   _assignResizer(sidebar);
 
   // Enable Chat popout Resize
-  libWrapper.register('sidebar-resizer', 'ChatLog.defaultOptions', function (wrapped, ...args) {
-    let result = wrapped(...args);
-    result.resizable = true;
-    result.height = parseInt($("#board").css('height')) / 2;
-    return result;
-  }, 'WRAPPER');
+  if (game.modules.get('lib-wrapper')?.active) {
+    libWrapper.register('sidebar-resizer', 'ChatLog.defaultOptions', function (wrapped, ...args) {
+      let result = wrapped(...args);
+      result.resizable = true;
+      result.height = parseInt($("#board").css('height')) / 2;
+      return result;
+    }, 'WRAPPER');
+  } else {
+    ui.notifications.warn("Sidebar and Chat Resizer: LibWrapper not enabled")
+  }
 });
 
 Hooks.on('renderSidebarTab', function(targetTab) {

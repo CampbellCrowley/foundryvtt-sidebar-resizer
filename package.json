@@ -1,6 +1,6 @@
 {
   "name": "foundryvtt-sidebar-resizer",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "Allows drag resizing of the right-hand sidebar",
   "main": "sidebar-resizer.js",
   "scripts": {

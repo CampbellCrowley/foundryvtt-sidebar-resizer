@@ -1,3 +1,7 @@
+# 0.2.1
+* Resize pop out chats too!
+* LibWrapper check and name update
+
 ## 0.2.0
 * Resize pop out chats too!
 
