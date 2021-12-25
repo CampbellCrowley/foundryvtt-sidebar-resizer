@@ -10,8 +10,13 @@ Originally created by VanceCole - Revived, improved, supported and maintained by
 
 ![](resizer.gif)
 
-# Module & System Incompatibilities
-Certain modules or systems may be incompatible with this module if they specify an !important flag on the width of the sidebar, in such cases please ping me on discord @JeansenVaars
+# Compatibility issues?
+I work on this module based on my personal preferences, and of course share it with others because I love doing so!
+
+Having said that, I only use a small limited subset of modules myself, and making modules work with others out there takes work, 
+which I am usually honestly not motivated to do. Do consider inviting me a Coffee and let me know which one doesn't work for you, I'll be more inspired afterwards :)
+
+Do track the issue however, it is good that it is not forgotten, or of course feel welcome to submit a pull request that makes it work and I'll happily accept it and give credits.
 
 # License
 
