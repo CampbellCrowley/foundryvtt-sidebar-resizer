@@ -8,6 +8,8 @@ Originally created by VanceCole - Revived, improved, supported and maintained by
 
 ## [Invite me a coffee if you like this :D](https://ko-fi.com/jeansenvaars)
 Check it out along my other modules [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui) and [Window Controls](https://github.com/saif-ellafi/foundryvtt-window-controls)
+#### [This module was made for free, with joy, long nights and because of hundred windows needed it, so tons of coffee :D!](https://ko-fi.com/jeansenvaars)
+[![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V14D3AH)
 
 ![](resizer.gif)
 
