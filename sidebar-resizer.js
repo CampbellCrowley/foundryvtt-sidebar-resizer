@@ -50,7 +50,7 @@ Hooks.once('ready', function() {
   libWrapper.register('sidebar-resizer', 'ChatLog.defaultOptions', function (wrapped, ...args) {
     let result = wrapped(...args);
     result.resizable = true;
-    result.height = 300;
+    result.height = parseInt($("#board").css('height')) / 2;
     return result;
   }, 'WRAPPER');
 });

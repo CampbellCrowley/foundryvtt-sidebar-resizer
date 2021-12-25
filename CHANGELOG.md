@@ -1,3 +1,6 @@
+## 0.2.0
+* Resize pop out chats too!
+
 ## 0.1.1
 * Use local storage instead of user flags for device support
 
