@@ -1,5 +1,5 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/latest/total) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/saif-ellafi/foundryvtt-sidebar-resizer) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-sidebar-resizer)
-# JV's Sidebar and Chat Resizer
+# Sidebar and Chat Resizer
 Allows users to resize the sidebar of Foundry VTT. Good for 4k screens or solo/PBP players.
 
 Simply hover over the edge of the sidebar and a resize cursor should appear, drag to the size you prefer. Will remember the size, individual to the computer you are using.
