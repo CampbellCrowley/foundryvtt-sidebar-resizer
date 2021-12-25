@@ -6,6 +6,7 @@ Simply hover over the edge of the sidebar and a resize cursor should appear, dra
 
 Originally created by VanceCole - Revived, improved, supported and maintained by @JeansenVaars
 
+### _By JeansenVaars_ - [Invite me to a Coffee](https://ko-fi.com/jeansenvaars) :) if you enjoy this module!
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V14D3AH)
 
 Check it out along my other modules [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui) and [Window Controls](https://github.com/saif-ellafi/foundryvtt-window-controls)
