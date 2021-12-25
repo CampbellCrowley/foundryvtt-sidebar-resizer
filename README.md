@@ -7,6 +7,7 @@ Simply hover over the edge of the sidebar and a resize cursor should appear, dra
 Originally created by VanceCole - Revived, improved, supported and maintained by @JeansenVaars
 
 ## [Invite me a coffee if you like this :D](https://ko-fi.com/jeansenvaars)
+Check it out along my other modules [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui) and [Window Controls](https://github.com/saif-ellafi/foundryvtt-window-controls)
 
 ![](resizer.gif)
 
