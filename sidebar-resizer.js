@@ -1,6 +1,10 @@
 function _assignResizer(sidebar) {
   let minSize = 300;
   let mouseStart, startSize, newSize;
+  let isImportant = '';
+
+  if (game.modules.get('dnd-ui')?.active)
+    isImportant = ' !important';
 
   // Create a resizer handle
   const resizer = document.createElement('div');
@@ -27,9 +31,9 @@ function _assignResizer(sidebar) {
   function resize(e) {
     newSize = Math.round(startSize + mouseStart - e.clientX);
     if (newSize >= minSize) {
-      sidebar.setAttribute('style', `width: ${newSize}px`);
+      sidebar.setAttribute('style', `width: ${newSize}px${isImportant}`);
     } else {
-      sidebar.setAttribute('style', `width: ${minSize}px$`);
+      sidebar.setAttribute('style', `width: ${minSize}px${isImportant}`);
     }
   }
 

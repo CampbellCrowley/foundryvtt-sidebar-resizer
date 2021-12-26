@@ -1,3 +1,6 @@
+# 0.2.3
+* Compatibility with dnd-ui module
+
 # 0.2.2
 * Fixed an issue with ghost sidebars in some special circumstances
 
