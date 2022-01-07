@@ -1,3 +1,7 @@
+# 0.2.4
+* Fixed a logical mistake related to libWrapper and how this module reports conflicts
+* Compatibility with Pathfinder UI V2 Legacy
+
 # 0.2.3
 * Compatibility with dnd-ui module
 

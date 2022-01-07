@@ -3,7 +3,7 @@ function _assignResizer(sidebar) {
   let mouseStart, startSize, newSize;
   let isImportant = '';
 
-  if (game.modules.get('dnd-ui')?.active)
+  if (game.modules.get('dnd-ui')?.active || game.modules.get('pathfinder-ui-legacy')?.active)
     isImportant = ' !important';
 
   // Create a resizer handle
@@ -57,8 +57,7 @@ Hooks.once('ready', function() {
       result.resizable = true;
       result.height = parseInt($("#board").css('height')) / 2;
       const lastSidebarSize = window.localStorage.getItem('sidebar-resizer-init-size');
-      if (!lastSidebarSize) return;
-      if (Number.isInteger(+lastSidebarSize)) result.width = parseInt(lastSidebarSize);
+      if (lastSidebarSize && Number.isInteger(+lastSidebarSize)) result.width = parseInt(lastSidebarSize);
       return result;
     }, 'WRAPPER');
   } else {
