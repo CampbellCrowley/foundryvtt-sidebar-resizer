@@ -12,7 +12,7 @@ Originally created by VanceCole - Revived, improved, supported and maintained by
 Check it out along my other modules [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui) and [Window Controls](https://github.com/saif-ellafi/foundryvtt-window-controls)
 #### [This module was made for free, with joy, long nights and because of hundred windows needed it, so tons of coffee :D!](https://ko-fi.com/jeansenvaars)
 
-![](resizer.gif)
+![](example.gif)
 
 # Compatibility issues?
 I work on this module based on my personal preferences, and of course share it with others because I love doing so!
