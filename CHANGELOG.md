@@ -1,3 +1,7 @@
+# 0.3.0
+* Added vertical resizer to the chat box
+* Improved compatibility with dnd-ui and patfhinder-ui
+
 # 0.2.4
 * Fixed a logical mistake related to libWrapper and how this module reports conflicts
 * Compatibility with Pathfinder UI V2 Legacy
