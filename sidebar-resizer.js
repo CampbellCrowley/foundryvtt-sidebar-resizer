@@ -56,7 +56,6 @@ function _createTinyMceChat(selector) {
         } else if (event.keyCode === 13 && ((modKey === 'ctrl' && event.ctrlKey) || (modKey === 'shift' && event.shiftKey) || (modKey === 'enter' && !event.ctrlKey))) {
           if (!event.target?.innerText.trim()?.length)
             return;
-          event.target.innerText = event.target.innerText.trim();
           event.preventDefault();
           event.stopPropagation();
           ChatMessage.create({content: event.target.innerHTML, speaker: ChatMessage.getSpeaker()})

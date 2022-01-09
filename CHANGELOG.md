@@ -1,3 +1,6 @@
+# 0.4.1
+* Last minute mistake on parsing the styles from the html editor
+
 # 0.4.0
 * Added a Setting that enables the Chat to support formatting
 * Fixed a console error one some loading circumstances
