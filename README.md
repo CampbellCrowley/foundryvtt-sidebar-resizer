@@ -2,9 +2,9 @@
 # Sidebar Resizer and Chat Editor
 Allows users to resize the sidebar of Foundry VTT, including the Chat Popout.
 
-Given the extra space, this module also optionally adds the possibility of Formatting the Chat (Experimental). The formatter is disabled by default.
+Adds the possibility of Formatting the Chat with a rich editor (Experimental). The formatter is disabled by default.
 
-Simply hover over the edge of the sidebar and a resize cursor should appear, drag to the size you prefer. Will remember the size, individual to the computer you are using.
+Hover over the edge of the sidebar or the top of the chat, and a resize cursor should appear, drag to the size you prefer. Will remember the size, individual to the computer you are using.
 
 Originally created by VanceCole - Revived, improved, supported and maintained by @JeansenVaars
 
