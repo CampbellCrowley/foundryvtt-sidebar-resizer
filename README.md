@@ -1,5 +1,5 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/latest/total) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/saif-ellafi/foundryvtt-sidebar-resizer) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-sidebar-resizer)
-# Sidebar Chat Resizer and Editor
+# Sidebar Resizer and Chat Editor
 Allows users to resize the sidebar of Foundry VTT, including the Chat Popout.
 
 Given the extra space, this module also optionally adds the possibility of Formatting the Chat (Experimental). The formatter is disabled by default.
