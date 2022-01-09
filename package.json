@@ -1,7 +1,7 @@
 {
   "name": "foundryvtt-sidebar-resizer",
-  "version": "0.3.0",
-  "description": "Allows drag resizing of the right-hand sidebar",
+  "version": "0.4.0",
+  "description": "Allows drag resizing of the right-hand sidebar, the chat and allows for chat formatting",
   "main": "sidebar-resizer.js",
   "scripts": {
     "copy": "mkdir -p dist && cp ./sidebar-resizer.js dist/ && cp ./README.md dist/ && cp ./CHANGELOG.md dist/ && cp ./LICENSE.md dist/ && cp ./module.json dist/ && cp ./THANKS.txt dist/",

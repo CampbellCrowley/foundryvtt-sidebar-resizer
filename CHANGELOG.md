@@ -1,3 +1,7 @@
+# 0.4.0
+* Added a Setting that enables the Chat to support formatting
+* Fixed a console error one some loading circumstances
+
 # 0.3.0
 * Added vertical resizer to the chat box
 * Improved compatibility with dnd-ui and patfhinder-ui

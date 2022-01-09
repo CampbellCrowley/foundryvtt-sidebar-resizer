@@ -1,6 +1,8 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/latest/total) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/saif-ellafi/foundryvtt-sidebar-resizer) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-sidebar-resizer)
-# Sidebar and Chat Resizer
-Allows users to resize the sidebar of Foundry VTT. Good for 4k screens or solo/PBP players.
+# Sidebar Chat Resizer and Formatter
+Allows users to resize the sidebar of Foundry VTT, including the Chat Popout.
+
+Given the extra space, this module also optionally adds the possibility of Formatting the Chat (Experimental). The formatter is disabled by default.
 
 Simply hover over the edge of the sidebar and a resize cursor should appear, drag to the size you prefer. Will remember the size, individual to the computer you are using.
 
@@ -13,6 +15,8 @@ Check it out along my other modules [Minimal UI](https://github.com/saif-ellafi/
 #### [This module was made for free, with joy, long nights and because of hundred windows needed it, so tons of coffee :D!](https://ko-fi.com/jeansenvaars)
 
 ![](example.gif)
+
+![img.png](img.png)
 
 # Compatibility issues?
 I work on this module based on my personal preferences, and of course share it with others because I love doing so!

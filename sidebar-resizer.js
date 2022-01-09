@@ -1,8 +1,70 @@
+const _sdbDebouncedReload = debounce(() => window.location.reload(), 100);
+
+Hooks.once('init', function() {
+  game.settings.register('sidebar-resizer', 'enableChatFormatting', {
+    name: 'Enable Chat Formatting (EXPERIMENTAL)',
+    hint: 'Enhances the chat box with text formatting tools.',
+    scope: 'world',
+    config: true,
+    type: Boolean,
+    default: false,
+    onChange: _sdbDebouncedReload
+  });
+
+  game.settings.register('sidebar-resizer', 'chatFormattingSendMod', {
+    name: 'Formatted Chat Key Modifier',
+    hint: 'Key combination to press with Enter before sending a message, when chat formatting is enabled',
+    scope: 'world',
+    config: true,
+    type: String,
+    choices: {
+      'enter': 'Enter',
+      'shift': 'Shift + Enter',
+      'ctrl': 'Ctrl + Enter'
+    },
+    default: 'ctrl',
+    onChange: _sdbDebouncedReload
+  });
+})
+
 function _getImportantStr() {
   if (game.modules.get('dnd-ui')?.active || game.modules.get('pathfinder-ui-legacy')?.active)
     return ' !important';
   else
     return '';
+}
+
+function _createTinyMceChat(selector) {
+  const modKey = game.settings.get('sidebar-resizer', 'chatFormattingSendMod')
+  tinyMCE.init({
+    target: selector,
+    branding: false,
+    statusbar: false,
+    menubar: false,
+    plugins: 'lists',
+    toolbar: 'bold italic underline | backcolor forecolor removeformat | numlist bullist | p h1 h2 h3',
+    height: '100%',
+    forced_root_block: false,
+    body_class: 'chat-form-tinymce',
+    content_style: '.chat-form-tinymce {background-color:#f1f2f6;}',
+    setup: function(editor) {
+      editor.on('keydown', function (event) {
+        if (modKey === 'enter' && event.keyCode === 13 && event.shiftKey) {
+          event.preventDefault();
+          event.stopPropagation();
+          this.execCommand('InsertLineBreak');
+        } else if (event.keyCode === 13 && ((modKey === 'ctrl' && event.ctrlKey) || (modKey === 'shift' && event.shiftKey) || (modKey === 'enter' && !event.ctrlKey))) {
+          if (!event.target?.innerText.trim()?.length)
+            return;
+          event.target.innerText = event.target.innerText.trim();
+          event.preventDefault();
+          event.stopPropagation();
+          ChatMessage.create({content: event.target.innerHTML, speaker: ChatMessage.getSpeaker()})
+          event.target.innerHTML = '';
+        }
+      });
+    }
+  })
 }
 
 function _assignResizer(sidebar) {
@@ -126,24 +188,25 @@ Hooks.once('renderSidebarTab', function() {
   }
 });
 
-Hooks.once('renderSidebarTab', function() {
+Hooks.on('renderChatLog', function (chat, div) {
+  if (chat.popOut) {
+    const element = div.find("#chat-message")[0];
+    element.id = '__temp'; // Hack for popout duplicate element id
+    _createTinyMceChat(div.find('textarea')[0]);
+    element.id = 'chat-message';
+  }
+  const chatform = div.find("#chat-form")[0];
+  _assignVerticalResizer(chatform);
   const lastChatformSize = window.localStorage.getItem('chatform-resizer-init-size');
   if (!lastChatformSize) return;
   if (Number.isInteger(+lastChatformSize)) {
-    const chatform = document.querySelector('#chat-form');
     chatform.setAttribute('style', `flex: 0 0 ${lastChatformSize}px`);
   }
 });
 
-Hooks.on('renderChatLog', function (chat, div) {
-  if (chat.popOut) {
-    const chatform = div.find("#chat-form")[0];
-    _assignVerticalResizer(chatform);
-    const lastChatformSize = window.localStorage.getItem('chatform-resizer-init-size');
-    if (!lastChatformSize) return;
-    if (Number.isInteger(+lastChatformSize)) {
-      chatform.setAttribute('style', `flex: 0 0 ${lastChatformSize}px`);
-    }
+Hooks.once('renderChatLog', function(chat, div) {
+  if (game.settings.get('sidebar-resizer', 'enableChatFormatting')) {
+    _createTinyMceChat(div.find('textarea')[0]);
   }
 });
 
