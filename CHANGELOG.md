@@ -1,3 +1,6 @@
+# 0.4.2
+* Fixed a spacing issue in the chat textarea
+
 # 0.4.1
 * Last minute mistake on parsing the styles from the html editor
 

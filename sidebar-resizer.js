@@ -122,7 +122,10 @@ function _assignVerticalResizer(chatform) {
   const resizer = document.createElement('div');
   resizer.style.width = '100%';
   resizer.style.height = '4px';
-  resizer.style.position = 'relative';
+  if (game.settings.get('sidebar-resizer', 'enableChatFormatting'))
+    resizer.style.position = 'relative';
+  else
+    resizer.style.position = 'fixed';
   resizer.style.cursor = 'row-resize';
   chatform.prepend(resizer);
 
@@ -195,7 +198,6 @@ Hooks.on('renderChatLog', function (chat, div) {
     element.id = 'chat-message';
   }
   const chatform = div.find("#chat-form")[0];
-  _assignVerticalResizer(chatform);
   const lastChatformSize = window.localStorage.getItem('chatform-resizer-init-size');
   if (!lastChatformSize) return;
   if (Number.isInteger(+lastChatformSize)) {
