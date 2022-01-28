@@ -1,5 +1,5 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/latest/total) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/saif-ellafi/foundryvtt-sidebar-resizer) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-sidebar-resizer)
-# Sidebar Resizer and Chat Editor
+# Sidebar, Chat and Windows Resizer
 
 * Resize the sidebar horizontally
 * Resize the chat text area vertically
@@ -26,12 +26,7 @@ Check it out along my other modules [Minimal UI](https://github.com/saif-ellafi/
 ![rich_chat_example.png](rich_chat_example.png)
 
 # Compatibility issues?
-I work on this module based on my personal preferences, and of course share it with others because I love doing so!
-
-Having said that, I only use a small limited subset of modules myself, and making modules work with others out there takes work, 
-which I am usually honestly not motivated to do. Do consider inviting me a Coffee and let me know which one doesn't work for you, I'll be more inspired afterwards :)
-
-Do track the issue however, it is good that it is not forgotten, or of course feel welcome to submit a pull request that makes it work and I'll happily accept it and give credits.
+Please be nice when asking! :)
 
 # License
 

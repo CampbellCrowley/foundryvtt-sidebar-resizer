@@ -1,7 +1,7 @@
 {
   "name": "sidebar-resizer",
-  "title": "Sidebar Resizer and Chat Editor",
-  "description": "Allows drag resizing of the right-hand sidebar, the chat and allows for chat style formatting",
+  "title": "Sidebar, Chat and Windows Resizer",
+  "description": "Resize chat and windows, as well an optional powerful chat editor",
   "authors": ["JeansenVaars", "Vance Cole"],
   "version": "0.5.0",
   "minimumCoreVersion": "0.8.9",
