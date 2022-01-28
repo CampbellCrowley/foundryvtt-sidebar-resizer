@@ -1,3 +1,8 @@
+# 0.5.0
+* All floating windows now resizable
+* Fixed a bug where floating chat would be enriched regardless of setting
+* Fixed a bug where chat vertical resizer was not enabled in chat popout
+
 # 0.4.2
 * Fixed a spacing issue in the chat textarea
 

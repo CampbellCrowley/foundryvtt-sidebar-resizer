@@ -1,4 +1,5 @@
 const _sdbDebouncedReload = debounce(() => window.location.reload(), 100);
+const _sdbFloatingDefaultSize = 2.5;
 
 Hooks.once('init', function() {
   game.settings.register('sidebar-resizer', 'enableChatFormatting', {
@@ -171,9 +172,57 @@ Hooks.once('ready', function() {
     libWrapper.register('sidebar-resizer', 'ChatLog.defaultOptions', function (wrapped, ...args) {
       let result = wrapped(...args);
       result.resizable = true;
-      result.height = parseInt($("#board").css('height')) / 2;
+      result.height = parseInt($("#board").css('height')) / _sdbFloatingDefaultSize;
       const lastSidebarSize = window.localStorage.getItem('sidebar-resizer-init-size');
       if (lastSidebarSize && Number.isInteger(+lastSidebarSize)) result.width = parseInt(lastSidebarSize);
+      return result;
+    }, 'WRAPPER');
+    libWrapper.register('sidebar-resizer', 'CombatTracker.defaultOptions', function (wrapped, ...args) {
+      let result = wrapped(...args);
+      result.resizable = true;
+      result.height = parseInt($("#board").css('height')) / _sdbFloatingDefaultSize;
+      return result;
+    }, 'WRAPPER');
+    libWrapper.register('sidebar-resizer', 'SceneDirectory.defaultOptions', function (wrapped, ...args) {
+      let result = wrapped(...args);
+      result.resizable = true;
+      result.height = parseInt($("#board").css('height')) / _sdbFloatingDefaultSize;
+      return result;
+    }, 'WRAPPER');
+    libWrapper.register('sidebar-resizer', 'ActorDirectory.defaultOptions', function (wrapped, ...args) {
+      let result = wrapped(...args);
+      result.resizable = true;
+      result.height = parseInt($("#board").css('height')) / _sdbFloatingDefaultSize;
+      return result;
+    }, 'WRAPPER');
+    libWrapper.register('sidebar-resizer', 'ItemDirectory.defaultOptions', function (wrapped, ...args) {
+      let result = wrapped(...args);
+      result.resizable = true;
+      result.height = parseInt($("#board").css('height')) / _sdbFloatingDefaultSize;
+      return result;
+    }, 'WRAPPER');
+    libWrapper.register('sidebar-resizer', 'RollTableDirectory.defaultOptions', function (wrapped, ...args) {
+      let result = wrapped(...args);
+      result.resizable = true;
+      result.height = parseInt($("#board").css('height')) / _sdbFloatingDefaultSize;
+      return result;
+    }, 'WRAPPER');
+    libWrapper.register('sidebar-resizer', 'CardsDirectory.defaultOptions', function (wrapped, ...args) {
+      let result = wrapped(...args);
+      result.resizable = true;
+      result.height = parseInt($("#board").css('height')) / _sdbFloatingDefaultSize;
+      return result;
+    }, 'WRAPPER');
+    libWrapper.register('sidebar-resizer', 'PlaylistDirectory.defaultOptions', function (wrapped, ...args) {
+      let result = wrapped(...args);
+      result.resizable = true;
+      result.height = parseInt($("#board").css('height')) / _sdbFloatingDefaultSize;
+      return result;
+    }, 'WRAPPER');
+    libWrapper.register('sidebar-resizer', 'CompendiumDirectory.defaultOptions', function (wrapped, ...args) {
+      let result = wrapped(...args);
+      result.resizable = true;
+      result.height = parseInt($("#board").css('height')) / _sdbFloatingDefaultSize;
       return result;
     }, 'WRAPPER');
   } else {
@@ -194,7 +243,8 @@ Hooks.on('renderChatLog', function (chat, div) {
   if (chat.popOut) {
     const element = div.find("#chat-message")[0];
     element.id = '__temp'; // Hack for popout duplicate element id
-    _createTinyMceChat(div.find('textarea')[0]);
+    if (game.settings.get('sidebar-resizer', 'enableChatFormatting'))
+      _createTinyMceChat(div.find('textarea')[0]);
     element.id = 'chat-message';
   }
   const chatform = div.find("#chat-form")[0];
@@ -203,6 +253,7 @@ Hooks.on('renderChatLog', function (chat, div) {
   if (Number.isInteger(+lastChatformSize)) {
     chatform.setAttribute('style', `flex: 0 0 ${lastChatformSize}px`);
   }
+  _assignVerticalResizer(chatform);
 });
 
 Hooks.once('renderChatLog', function(chat, div) {

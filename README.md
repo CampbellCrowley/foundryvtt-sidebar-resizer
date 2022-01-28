@@ -1,12 +1,14 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/latest/total) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/saif-ellafi/foundryvtt-sidebar-resizer) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-sidebar-resizer)
 # Sidebar Resizer and Chat Editor
-Allows users to resize the sidebar of Foundry VTT, including the Chat Popout.
 
-Adds the possibility of Formatting the Chat with a rich editor (Experimental). The formatter is disabled by default.
+* Resize the sidebar horizontally
+* Resize the chat text area vertically
+* Resize any sidebar floating windows (Combat Tracker, Playlist, etc.)
+* Enable an advanced rich editor to the chat (Disabled by default)
 
-Hover over the edge of the sidebar or the top of the chat, and a resize cursor should appear, drag to the size you prefer. Will remember the size, individual to the computer you are using.
+For resizing the Sidebar and the Chat, hover the mouse over the borders and drag and drop. Size will be remembered.
 
-Originally created by VanceCole - Revived, improved, supported and maintained by @JeansenVaars
+_Originally created by VanceCole - Revived, improved and maintained by @JeansenVaars_
 
 ### _By JeansenVaars_ - [Invite me to a Coffee](https://ko-fi.com/jeansenvaars) :) if you enjoy this module!
 [![ko-fi](https://ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/V7V14D3AH)
@@ -14,9 +16,14 @@ Originally created by VanceCole - Revived, improved, supported and maintained by
 Check it out along my other modules [Minimal UI](https://github.com/saif-ellafi/foundryvtt-minimal-ui) and [Window Controls](https://github.com/saif-ellafi/foundryvtt-window-controls)
 #### [This module was made for free, with joy, long nights and because of hundred windows needed it, so tons of coffee :D!](https://ko-fi.com/jeansenvaars)
 
-![](example.gif)
+### Chat Text Area Resizer 
+![resize_example.gif](resize_example.gif)
 
-![img.png](img.png)
+### Resize any Sidebar floating Windows
+![floating_win_example.png](floating_win_example.png)
+
+### Rich editor for Text Area
+![rich_chat_example.png](rich_chat_example.png)
 
 # Compatibility issues?
 I work on this module based on my personal preferences, and of course share it with others because I love doing so!
