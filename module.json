@@ -1,6 +1,6 @@
 {
   "name": "sidebar-resizer",
-  "title": "Chat and Windows Resizer",
+  "title": "Sidebar and Windows Resizer",
   "description": "Resize chat and windows, as well an optional powerful chat editor",
   "authors": ["JeansenVaars", "Vance Cole"],
   "version": "0.6.0",
