@@ -1,3 +1,6 @@
+# 0.6.0
+* Support for Foundry V10
+
 # 0.5.0
 * All floating windows now resizable
 * Fixed a bug where floating chat would be enriched regardless of setting
