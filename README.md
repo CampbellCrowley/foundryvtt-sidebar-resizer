@@ -1,5 +1,5 @@
 ![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/latest/total) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/saif-ellafi/foundryvtt-sidebar-resizer) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-sidebar-resizer)
-# Chat and Windows Resizer
+# Sidebar and Windows Resizer
 
 * Resize the sidebar horizontally
 * Resize the chat text area vertically
