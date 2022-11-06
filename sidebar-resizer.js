@@ -164,6 +164,7 @@ Hooks.once('ready', function() {
   // Setup vars
   const sidebar = ui.sidebar.element[0];
   const chatform = $(ui.chat.element[0]).find("#chat-form")[0];
+  if (!chatform) return;
   _assignResizer(sidebar);
   _assignVerticalResizer(chatform);
 
@@ -248,6 +249,7 @@ Hooks.on('renderChatLog', function (chat, div) {
     element.id = 'chat-message';
   }
   const chatform = div.find("#chat-form")[0];
+  if (!chatform) return;
   const lastChatformSize = window.localStorage.getItem('chatform-resizer-init-size');
   if (!lastChatformSize) return;
   if (Number.isInteger(+lastChatformSize)) {
