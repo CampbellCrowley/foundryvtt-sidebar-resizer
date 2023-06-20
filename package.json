@@ -1,6 +1,6 @@
 {
   "name": "foundryvtt-sidebar-resizer",
-  "version": "0.6.1",
+  "version": "0.7.0",
   "description": "Allows drag resizing of the right-hand sidebar, the chat and allows for chat formatting",
   "main": "sidebar-resizer.js",
   "scripts": {

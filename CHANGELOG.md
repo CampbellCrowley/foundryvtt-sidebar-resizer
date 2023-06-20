@@ -1,3 +1,6 @@
+# 0.7.0
+* Support for Foundry V11
+
 # 0.6.1
 * Avoid errors in some strange situations where chat is slow to load
 
