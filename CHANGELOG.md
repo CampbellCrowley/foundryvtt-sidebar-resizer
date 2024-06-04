@@ -1,3 +1,6 @@
+# 0.8.0
+* Support for Foundry V12
+
 # 0.7.0
 * Support for Foundry V11
 
