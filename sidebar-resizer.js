@@ -264,6 +264,18 @@ Hooks.once('renderChatLog', function(chat, div) {
   }
 });
 
+Hooks.on("renderChatLog", function(chat) {
+    const sidebar = ui.sidebar.element[0];
+    const chatform = $(ui.chat.element[0]).find("#chat-form")[0];
+    if (!chatform) return;
+    _assignResizer(sidebar);
+    _assignVerticalResizer(chatform);
+    chat.options.resizable = true;
+    chat.options.height = parseInt($("#board").css('height')) / _sdbFloatingDefaultSize;
+    const lastSidebarSize = window.localStorage.getItem('sidebar-resizer-init-size');
+    if (lastSidebarSize && Number.isInteger(+lastSidebarSize)) chat.options.width = parseInt(lastSidebarSize);
+});
+
 Hooks.on('collapseSidebar', function(_, isCollapsing) {
   const lastSidebarSize = window.localStorage.getItem('sidebar-resizer-init-size');
   if (!lastSidebarSize || isCollapsing) return;

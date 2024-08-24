@@ -1,3 +1,7 @@
+# Forked from [saif-ellafi/foundryvtt-sidebar-resizer](https://github.com/saif-ellafi/foundryvtt-sidebar-resizer)
+
+Because chat resizing was broken in the current foundryvtt release.
+
 ![GitHub all releases](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/total?logo=GitHub) ![GitHub release (latest by date)](https://img.shields.io/github/downloads/saif-ellafi/foundryvtt-sidebar-resizer/latest/total) ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/saif-ellafi/foundryvtt-sidebar-resizer) ![GitHub issues](https://img.shields.io/github/issues-raw/saif-ellafi/foundryvtt-sidebar-resizer)
 # Sidebar and Windows Resizer
 
